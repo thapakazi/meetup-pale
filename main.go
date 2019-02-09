@@ -6,10 +6,11 @@ import (
 )
 
 type Event struct {
-	name     string
-	location string
-	date     time.Duration
-	details  string
+	name        string
+	location    string
+	date        time.Duration
+	description string
+	organizer   string
 }
 type Events []Event
 
