@@ -1,0 +1,7 @@
+* Telegram Meetup Bot
+
+  This bot help gather meetup info right into your telegram group chat.
+  It scraps meetup details from twitter, meetup.com and other source(PR welcome.)
+
+* Structure:  
+  
