@@ -2,13 +2,13 @@ package pale
 
 import (
 	"fmt"
-	"time"
 )
 
 type Event struct {
 	name        string
+	link        string
 	location    string
-	date        time.Duration
+	dateTime    string
 	description string
 	organizer   string
 }
