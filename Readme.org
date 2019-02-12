@@ -9,29 +9,14 @@
 ** Meetup
    - find the groups around 100miles
      
-     | params           | value      | details                          |
-     |------------------+------------+----------------------------------|
-     | country          | np         | Nepal                            |
-     | radius           | 90         | [[https://en.wikipedia.org/wiki/Geography_of_Nepal][90miles range]]                    |
-     | upcomming_events | true       | hot and happening events         |
-     | key              | check .env | your Meetup.com key, [[https://secure.meetup.com/meetup_api/key/][get it here]] |
-     |------------------+------------+----------------------------------|
+     | params     | value      | details                          |
+     |------------+------------+----------------------------------|
+     | radius     | 90         | [[https://en.wikipedia.org/wiki/Geography_of_Nepal][90miles range]]                    |
+     | lat & long |            | check .env.sample                |
+     | key        | check .env | your Meetup.com key, [[https://secure.meetup.com/meetup_api/key/][get it here]] |
+     |------------+------------+----------------------------------|
 
-     Query api is:
+     Query api with your ~api_key~ as:
      #+begin_src bash
      http https://api.meetup.com/find/groups?key=$api_key\&country\=np\&radius\=100\&upcoming_events\=true|jq .[].link > /tmp/100
      #+end_src
-*** Response: 
-  - Groups details:
-     name             : Group Name
-     description      : Group Description
-     link             : Group link
-     lat              : 27.71 (float)
-     lon              : 85.31 (float)
-     members          : number of members in group
-  - Event details:
-     next_event.id    : Alphanumeric event ID (string)
-     next_event.name  : Name of event
-     next_event.time  : UTC start time of the event, in milliseconds since the epoch (int) 
-     organizer.name   : Organized by
-
